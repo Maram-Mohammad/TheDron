@@ -9,9 +9,20 @@
     "schemes": ["http", "https"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
+    "tags": [
+      {
+        "name": "dorns",
+        "description": "Endpoints for managing drones"
+      },
+      {
+        "name": "medications",
+        "description": "Endpoints for managing medications"
+      }
+    ],
     "paths": {
-      "/drones": {
+      "/dorns": {
         "post": {
+          "tags": ["dorns"],
           "summary": "Register a new drone",
           "parameters": [],
           "responses": {
@@ -24,8 +35,9 @@
           }
         }
       },
-      "/drones/{droneId}/load": {
+      "/dorns/{droneId}/load": {
         "post": {
+          "tags": ["dorns"],
           "summary": "Load medication items onto a drone",
           "parameters": [
             {
@@ -56,8 +68,9 @@
           }
         }
       },
-      "/drones/{droneId}/medication": {
+      "/dorns/{droneId}/medications": {
         "get": {
+          "tags": ["dorns"],
           "summary": "Get loaded medication items for a drone",
           "parameters": [
             {
@@ -77,8 +90,9 @@
           }
         }
       },
-      "/drones/available": {
+      "/dorns/available": {
         "get": {
+          "tags": ["dorns"],
           "summary": "Get available drones for loading",
           "responses": {
             "200": {
@@ -87,8 +101,9 @@
           }
         }
       },
-      "/drones/{droneId}/battery": {
+      "/dorns/{droneId}/battery": {
         "get": {
+          "tags": ["dorns"],
           "summary": "Get battery level for a drone",
           "parameters": [
             {
@@ -110,6 +125,7 @@
       },
       "/medications": {
         "post": {
+          "tags": ["medications"],
           "summary": "Add new medication",
           "parameters": [],
           "responses": {
@@ -122,6 +138,7 @@
           }
         },
         "get": {
+          "tags": ["medications"],
           "summary": "List all medications",
           "responses": {
             "200": {
@@ -130,8 +147,9 @@
           }
         }
       },
-      "/medications/{medicationId}/select-drone": {
+      "/medications/{medicationId}/dorns": {
         "get": {
+          "tags": ["medications"],
           "summary": "Select drone for specific medication",
           "parameters": [
             {
@@ -156,6 +174,32 @@
       }
     },
     "definitions": {
+      "Drone": {
+        "type": "object",
+        "properties": {
+          "serialNumber": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "model": {
+            "type": "string",
+            "enum": ["Lightweight", "Middleweight", "Cruiserweight", "Heavyweight"]
+          },
+          "weightLimit": {
+            "type": "number",
+            "maximum": 500
+          },
+          "batteryCapacity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "state": {
+            "type": "string",
+            "enum": ["IDLE", "LOADING", "LOADED", "DELIVERING", "DELIVERED", "RETURNING"]
+          }
+        }
+      },
       "MedicationItem": {
         "type": "object",
         "properties": {
