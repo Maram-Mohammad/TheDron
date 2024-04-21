@@ -1,0 +1,23 @@
+1. If Drone has X Capacity
+    > Try to be loaded with Capacity equal to to x 
+    > to be loaded with Capacity less than X
+    > to be loaded with Capacity more than x 
+
+2. check Drone Bettery 
+    > more than 25 --> Move 
+    > less than 25 --> Don't move 
+    > Equal to 25 --> Move 
+
+3. Check Validation 
+    > Serial Number --> max 100 character 
+    > Model is one of slected items
+    > Weight limit 
+    > State is one of Item
+    > name of medication
+    > Code of Medication 
+
+4. User can't select not available dron to carry meddication
+
+5. Check availability of dron after loading 
+
+6. 

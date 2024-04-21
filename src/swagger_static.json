@@ -1,0 +1,178 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Drone Dispatch Service",
+      "version": "1.0.0",
+      "description": "REST API service for managing drones and medications"
+    },
+    "basePath": "/api",
+    "schemes": ["http", "https"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+      "/drones": {
+        "post": {
+          "summary": "Register a new drone",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "Drone registered successfully"
+            },
+            "400": {
+              "description": "Invalid drone data"
+            }
+          }
+        }
+      },
+      "/drones/{droneId}/load": {
+        "post": {
+          "summary": "Load medication items onto a drone",
+          "parameters": [
+            {
+              "name": "droneId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "medicationItems",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/MedicationItem"
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Medication items loaded successfully"
+            },
+            "400": {
+              "description": "Loading failed"
+            }
+          }
+        }
+      },
+      "/drones/{droneId}/medication": {
+        "get": {
+          "summary": "Get loaded medication items for a drone",
+          "parameters": [
+            {
+              "name": "droneId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "List of loaded medication items"
+            },
+            "404": {
+              "description": "Drone not found"
+            }
+          }
+        }
+      },
+      "/drones/available": {
+        "get": {
+          "summary": "Get available drones for loading",
+          "responses": {
+            "200": {
+              "description": "List of available drones"
+            }
+          }
+        }
+      },
+      "/drones/{droneId}/battery": {
+        "get": {
+          "summary": "Get battery level for a drone",
+          "parameters": [
+            {
+              "name": "droneId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Battery level of the drone"
+            },
+            "404": {
+              "description": "Drone not found"
+            }
+          }
+        }
+      },
+      "/medications": {
+        "post": {
+          "summary": "Add new medication",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "Medication added successfully"
+            },
+            "400": {
+              "description": "Invalid medication data"
+            }
+          }
+        },
+        "get": {
+          "summary": "List all medications",
+          "responses": {
+            "200": {
+              "description": "List of all medications"
+            }
+          }
+        }
+      },
+      "/medications/{medicationId}/select-drone": {
+        "get": {
+          "summary": "Select drone for specific medication",
+          "parameters": [
+            {
+              "name": "medicationId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Drone selected successfully"
+            },
+            "404": {
+              "description": "Medication not found"
+            },
+            "400": {
+              "description": "No available drones or loading failed"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "MedicationItem": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number"
+          },
+          "code": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  
