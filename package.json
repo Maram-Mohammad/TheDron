@@ -4,14 +4,12 @@
     "description": "",
     "main": "dist/index.js",
     "scripts": {
-      "compile-swagger": "shx rm -rf lib/ && tsc && rsync -a --exclude='*.ts' src/ dist/ && npm run swagger-autogen",
       "compile": "shx rm -rf lib/ && tsc && rsync -a --exclude='*.ts' src/ dist/",
       "compile-dev": "shx rm -rf lib/ && tsc && cp -r src dist && find ./dist -regex .*\\.ts -exec rm {} \\;",
       "start:dev": "nodemon dist/index.js",
       "start": "node dist/index.js",
       "test": "jest --testMatch='**/*.test.js'",
-      "test:e2e": "node dist/config/app.config.js && jest --config jest.config.js",
-      "swagger-autogen": "node ./dist/swagger.js"
+      "test:e2e": "node dist/config/app.config.js && jest --config jest.config.js"
     },
     "keywords": [],
     "author": "",
