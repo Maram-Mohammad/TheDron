@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Medication 1",
+      "weight": 100,
+      "code": "MED001",
+      "image": "medication1.jpg"
+    },
+    {
+      "name": "Medication 2",
+      "weight": 200,
+      "code": "MED002",
+      "image": "medication2.jpg"
+    },
+    {
+      "name": "Medication 3",
+      "weight": 150,
+      "code": "MED003",
+      "image": "medication3.jpg"
+    },
+    {
+      "name": "Medication 4",
+      "weight": 180,
+      "code": "MED004",
+      "image": "medication4.jpg"
+    },
+    {
+      "name": "Medication 5",
+      "weight": 120,
+      "code": "MED005",
+      "image": "medication5.jpg"
+    },
+    {
+      "name": "Medication 6",
+      "weight": 170,
+      "code": "MED006",
+      "image": "medication6.jpg"
+    },
+    {
+      "name": "Medication 7",
+      "weight": 130,
+      "code": "MED007",
+      "image": "medication7.jpg"
+    },
+    {
+      "name": "Medication 8",
+      "weight": 160,
+      "code": "MED008",
+      "image": "medication8.jpg"
+    },
+    {
+      "name": "Medication 9",
+      "weight": 140,
+      "code": "MED009",
+      "image": "medication9.jpg"
+    },
+    {
+      "name": "Medication 10",
+      "weight": 110,
+      "code": "MED010",
+      "image": "medication10.jpg"
+    },
+    {
+      "name": "Medication 11",
+      "weight": 105,
+      "code": "MED011",
+      "image": "medication11.jpg"
+    },
+    {
+      "name": "Medication 12",
+      "weight": 220,
+      "code": "MED012",
+      "image": "medication12.jpg"
+    },
+    {
+      "name": "Medication 13",
+      "weight": 190,
+      "code": "MED013",
+      "image": "medication13.jpg"
+    },
+    {
+      "name": "Medication 14",
+      "weight": 125,
+      "code": "MED014",
+      "image": "medication14.jpg"
+    },
+    {
+      "name": "Medication 15",
+      "weight": 135,
+      "code": "MED015",
+      "image": "medication15.jpg"
+    },
+    {
+      "name": "Medication 16",
+      "weight": 155,
+      "code": "MED016",
+      "image": "medication16.jpg"
+    },
+    {
+      "name": "Medication 17",
+      "weight": 165,
+      "code": "MED017",
+      "image": "medication17.jpg"
+    },
+    {
+      "name": "Medication 18",
+      "weight": 145,
+      "code": "MED018",
+      "image": "medication18.jpg"
+    },
+    {
+      "name": "Medication 19",
+      "weight": 115,
+      "code": "MED019",
+      "image": "medication19.jpg"
+    },
+    {
+      "name": "Medication 20",
+      "weight": 175,
+      "code": "MED020",
+      "image": "medication20.jpg"
+    }
+  ]
+  

@@ -1,0 +1,73 @@
+[
+    {
+      "serialNumber": "DRN001",
+      "model": "Lightweight",
+      "weightLimit": 500,
+      "batteryCapacity": 100,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN002",
+      "model": "Middleweight",
+      "weightLimit": 500,
+      "batteryCapacity": 80,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN003",
+      "model": "Cruiserweight",
+      "weightLimit": 500,
+      "batteryCapacity": 60,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN004",
+      "model": "Heavyweight",
+      "weightLimit": 500,
+      "batteryCapacity": 40,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN005",
+      "model": "Lightweight",
+      "weightLimit": 500,
+      "batteryCapacity": 70,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN006",
+      "model": "Middleweight",
+      "weightLimit": 500,
+      "batteryCapacity": 90,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN007",
+      "model": "Cruiserweight",
+      "weightLimit": 500,
+      "batteryCapacity": 20,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN008",
+      "model": "Heavyweight",
+      "weightLimit": 500,
+      "batteryCapacity": 50,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN009",
+      "model": "Lightweight",
+      "weightLimit": 500,
+      "batteryCapacity": 30,
+      "state": "IDLE"
+    },
+    {
+      "serialNumber": "DRN010",
+      "model": "Middleweight",
+      "weightLimit": 500,
+      "batteryCapacity": 75,
+      "state": "IDLE"
+    }
+  ]
+  
