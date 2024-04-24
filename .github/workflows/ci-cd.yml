@@ -1,0 +1,49 @@
+name: CI/CD - PrePush to Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Test_Build:
+    runs-on: ubuntu-latest     
+          
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+      
+      # - name: Run Lint
+      #   run: npm run lint
+
+      - name: Build Code
+        run: npm run compile
+      
+      - name: Run Tests 
+        run: npm run test
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker image
+        run: docker build -t your-image-name:latest .
+
+      - name: Log in to Docker Hub
+        run: echo registered 
+
+      - name: Push Docker image
+        run: echo done                      
